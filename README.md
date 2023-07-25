@@ -6,7 +6,9 @@
 
 The project files are five (5):
 
-1) declarations.h -> Contains all includes, defines, the definition of the struct "shared memory," and
+1) "Assignment 1".pdf contains the objectives of the exercise (Winter Semester 2022/2023).
+
+2) declarations.h -> Contains all includes, defines, the definition of the struct "shared memory," and
     a helper function "find_milliseconds()." Briefly, it's worth mentioning that the definition of the variables 
 	"lock" and "unlock" aims only to enhance the visual understanding of the code during the ups and downs of the 
 	semaphores. The "find_milliseconds()" function returns the milliseconds of the current timestamp. Within the 
@@ -17,11 +19,11 @@ The project files are five (5):
 	The user selects the option from the keyboard with simultaneous validation of incorrect input. The remaining 
 	variables in the shared memory are either explained with comments or their usage is evident from their names.
 
-2) ostext.txt -> This is the txt file processed by the main code. It contains a total of 1251 lines.
+3) ostext.txt -> This is the txt file processed by the main code. It contains a total of 1251 lines.
 
-3) Makefile (the compile and run commands are provided at the end of the README)
+4) Makefile (the compile and run commands are provided at the end of the README)
 
-4) OSHW_1.c -> Includes the code for the parent process. Initially, there is a set of outputs to the user, through which 
+5) OSHW_1.c -> Includes the code for the parent process. Initially, there is a set of outputs to the user, through which 
 the user inputs data, such as the segment size (= number of lines each segment should have), the number of children the 
 parent wants to create, and the number of requests each child should make. The last two values do not have a value restriction, 
 but for large numbers, the program will obviously take longer to execute. The parent creates its own log file to record the 
@@ -37,7 +39,7 @@ Additionally, apart from the parent's log file, messages are printed in the term
 and children (the child requests something, the parent serves it, and the child confirms the receipt for us to proceed to the next steps). 
 Finally, the parent waits until all children finish their tasks.
 
-5) OSHW_1_child.c -> Contains the code for the children. After the necessary semaphore obtains and shared memory attachment, each 
+6) OSHW_1_child.c -> Contains the code for the children. After the necessary semaphore obtains and shared memory attachment, each 
 child creates its own log file (one for each child) to print the project-related requests concerning the children. Similarly, effort 
 was made to interact with the user and display the execution states and results in detail. In the parent's code, at the points where 
 times and data related to interactions with the children are printed, some string manipulations are performed (and certain numerical 
